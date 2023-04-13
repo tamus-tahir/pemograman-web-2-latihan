@@ -8,4 +8,9 @@ class Home extends BaseController
     {
         return view('welcome_message');
     }
+
+    public function prodi($prodi = 'Sistem Informasi', $kampus = 'Unitama')
+    {
+        echo $prodi . ' ' . $kampus;
+    }
 }
