@@ -6,11 +6,6 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
-    }
-
-    public function prodi($prodi = 'Sistem Informasi', $kampus = 'Unitama')
-    {
-        echo $prodi . ' ' . $kampus;
+        return view('home/index');
     }
 }

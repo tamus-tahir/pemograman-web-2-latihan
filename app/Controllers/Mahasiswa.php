@@ -4,8 +4,13 @@ namespace App\Controllers;
 
 class Mahasiswa extends BaseController
 {
-    public function index($nama = '', $nim  = '')
+    public function index()
     {
-        echo "Nama $nama, NIM $nim";
+        $mahasiswaModel = new \App\Models\MahasiswaModel();
+        $data = [
+            'mahasiswa' => $mahasiswaModel->findAll(),
+        ];
+
+        return view('mahasiswa/index', $data);
     }
 }
