@@ -12,4 +12,9 @@ class MahasiswaModel extends Model
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
+
+    function getId($id_mahasiswa)
+    {
+        return $this->where([$this->primaryKey => $id_mahasiswa])->first();
+    }
 }
